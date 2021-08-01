@@ -27,7 +27,7 @@ def PHA(n,g,h,M):
 
 
 if __name__ =="__main__":
-    prime,g,x,h,order_g = PHA_Parameter.PHA_Parameter()
+    prime,g,x,h,order_g = PHA_Parameter.PHA_Parameter(50000,100000)
     print("GF({}) , G = <{}> , |G| = {} , {}^{} = {}".format(prime,g,order_g,g,x,h))
     #n = [(2,4),(104729,8),(224737,8),(350377,4)]
     #PHA_sol = int(PHA(n,71,210,251))

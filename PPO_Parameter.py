@@ -1,8 +1,10 @@
 import Lib
 import random
 import math
+import Miller_Rabin
 
 def random_prime(a,b):
+    '''
     prime_list = []
     for sub_num in range(a,b+1):
         flag = True
@@ -14,22 +16,31 @@ def random_prime(a,b):
             prime_list.append(sub_num)
 
     print(1)
+    '''
     while(1):
-        num = random.randint(int(len(prime_list)/1.5), len(prime_list) - 1)
-        q = prime_list[num]
+        #num = random.randint(int(len(prime_list)/1.5), len(prime_list) - 1)
+        #q = prime_list[num]
+        q = Miller_Rabin.Probably_Prime(2,10000)
         power = random.randint(2,20)
+        while 1:
+            p = Miller_Rabin.Probably_Prime(2,q)
+            p_n = Lib.mns(p,power,q)
+            if (q-1)%p_n == 0:
+                break
+        '''
         for i in prime_list[:num]:
             p_n = Lib.mns(i,power,q)
             if (q-1)%p_n==0:
                 break
+        '''
         h = random.randint(2,q-2)
         g = Lib.mns(h,int(q/p_n),q)
         if g!=1:
-            return (i,power,g,q)
+            return (p,power,g,q)
 
 
 
- def PPO_Parameter():
+def PPO_Parameter():
     p,power,g,q = random_prime(3, 200)
     x = random.randint(2,Lib.mns_n(p,power)-1)
     h = Lib.mns(g,x,q)

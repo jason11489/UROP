@@ -41,10 +41,10 @@ def Probably_Prime(a,b):
             n = random.randint(a, b)
             if n % 2 == 1:
                 break
-        if is_prime_by_miller_rabin(n,20) == "Probably Prime":
+        if is_prime_by_miller_rabin(n,10) == "Probably Prime":
             return n
 
 if __name__ == "__main__":
-    prime = Probably_Prime()
+    prime = Probably_Prime(2,20)
     print("===================")
     print("n = {}".format(prime))

@@ -35,6 +35,8 @@ def quick_sort(A,low,high,r=0):
         #print('m = ',m)
         quick_sort(A,low,m-1,r)
         quick_sort(A,m+1,high,r)
+
+
 if __name__=="__main__":
     A = [[0, 1], [1, 3], [2, 9], [3, 27], [5, 10], [4, 81], [6, 30], [7, 90], [8, 37], [9, 111], [10, 100], [11, 67], [12, 201], [13, 137], [14, 178], [15, 68]]
 
@@ -83,6 +85,7 @@ def bin_search(list,target):
         return bin_search(list[mid+1:],target)
     else:
         return bin_search(list[:mid],target)
+
 def inverse(a,p):
     t0, t1 = a,p
     u0,u1 = 1,0
@@ -94,6 +97,7 @@ def inverse(a,p):
     if u0 < 0:
         u0 = u0 + p
     return u0
+
 
 def random_prime(a,b):
     prime_list = []
@@ -166,3 +170,5 @@ def divisor(N):
 if __name__=="__main__":
     print("===================")
     print(factor(8100))
+    print("===================")
+    print(order(6,229))

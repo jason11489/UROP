@@ -112,6 +112,7 @@ def order(g,p):
     for i in range(1,p):
         if mns(g,i,p)==1:
             return i
+
 def is_prime(p):
     if p == 2:
         return True
@@ -148,6 +149,16 @@ def factor(N):
                 sub_num+=1
             if N%i ==0:
                 list.append((i,sub_num))
+
+    return list
+
+def divisor(N):
+    list = []
+    for i in range(2, N + 1):
+        if is_prime(i):
+            sub_N = N
+            if N % i == 0:
+                list.append(i)
 
     return list
 

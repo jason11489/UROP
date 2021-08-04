@@ -7,14 +7,14 @@ import Gauss_Jordan
 
 
 def Index_Calculus(p,q,g,h):   # q|(p-1) ( p,q : prime ), H = <g> , | H | = q , find x s.t. g^x = h
-    cost = 5
-    total = 5
+    cost = 8
+    total = 8
     equation_list = []
     for i in range(total):
         equation_list.append([0 for i in range(cost+1)])
 
-    S = [2,3,5]
-    for i in range(total-3):
+    S = [2,3,5,7,11]
+    for i in range(total-5):
         while 1:
             prime = Miller_Rabin.Probably_Prime(2,p-1)
             if prime not in S:
@@ -22,7 +22,7 @@ def Index_Calculus(p,q,g,h):   # q|(p-1) ( p,q : prime ), H = <g> , | H | = q , 
                 break
     quick.quick_sort(S,0,len(S)-1)
 
-    print("(Step 1) \nS = [ {},{},{},{},{} ]\n".format(S[0],S[1],S[2],S[3],S[4]))
+    print("(Step 1) \nS = {}\n".format(S))
     print('(Step 2,3) ')
     cnt = 0
     k = 0
@@ -61,7 +61,8 @@ def Index_Calculus(p,q,g,h):   # q|(p-1) ( p,q : prime ), H = <g> , | H | = q , 
 
     print("\n(Step 4,5) ")
     for i in equation_list:
-        print("{} = {}*X(0) + {}*X(1) + {}*X(2) + {}*X(3) + {}*X(4)".format(i[5],i[0],i[1],i[2],i[3],i[4]))
+        print("{} = {}*X(0) + {}*X(1) + {}*X(2) + {}*X(3) + {}*X(4)"
+              "+ {}*X(5) + {}*X(6) + {}*X(7)".format(i[8],i[0],i[1],i[2],i[3],i[4],i[5],i[6],i[7]))
     #Step6
 
     X_sol = Gauss_Jordan.Gauss_Jordan(equation_list,q)
@@ -101,26 +102,28 @@ def Index_Calculus(p,q,g,h):   # q|(p-1) ( p,q : prime ), H = <g> , | H | = q , 
 
     print("\n\n(Step 9) \nx = {}".format(final_x))
 
-    return final_x
+    return final_x%q
 
 
 
 
 if __name__ == "__main__":
 
-    p,q,g = DSA_Parameter.DSA_Parameter(10,600)
+    p,q,g = DSA_Parameter.DSA_Parameter(100,1000)
     x = random.randint(2,q-1)
     h = Lib.mns(g,x,p)
     '''
-    p,q,g = 2447,1223,5
+    p,q,g = 2447,1223,25
     x = 9999
     h = 811
     '''
     print("GF({}) , G = <{}> , |G| = {} , {}^{} = {}".format(p,g,q,g,x,h))
     print("=======================\nIndex-Calculus Algorithm\n=======================")
+
     final_x = Index_Calculus(p,q,g,h)
     print("\nreal x = {}\nsol x = {}".format(x,final_x))
-    print(x==final_x)
+
+
 
 
 

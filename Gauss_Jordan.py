@@ -24,8 +24,8 @@ def line_multi(list,i,num,p):
 
 
 def Gauss_Jordan(list,p):
-    cost = 5
-    total = 5
+    cost = 8
+    total = 8
 
     if list[0][0] == 0:
         for i in range(total):
@@ -54,8 +54,8 @@ def Gauss_Jordan(list,p):
 
     for i in range(0,total):
         for j in range(i+1,total):
-            num = find_addition_inverse(list[4-i][4-i],list[4-j][4-i],p)
-            addi_operation(list,4-i,4-j,num,p)
+            num = find_addition_inverse(list[7-i][7-i],list[7-j][7-i],p)
+            addi_operation(list,7-i,7-j,num,p)
 
     final_list = []
     for i in list:

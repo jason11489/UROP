@@ -9,6 +9,7 @@ def find_addition_inverse(num1,num2,p):
         sub_num = num1*i
         if (sub_num + num2)%p ==0:
             return i
+    return 0
 
 def addi_operation(list,a,b,num,p):
     sub_num = 0

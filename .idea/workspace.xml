@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c8e90f34-6e43-493d-90a7-b0147f5cff2d" name="Default Changelist" comment="modify code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gauss_Jordan.py" beforeDir="false" afterPath="$PROJECT_DIR$/Gauss_Jordan.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Index_Calculus.py" beforeDir="false" afterPath="$PROJECT_DIR$/Index_Calculus.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -141,8 +140,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.Index_Calculus" />
-        <item itemvalue="Python.Gauss_Jordan" />
         <item itemvalue="Python.Miller_Rabin" />
+        <item itemvalue="Python.Gauss_Jordan" />
         <item itemvalue="Python.BSGS" />
         <item itemvalue="Python.DSA_Parameter" />
       </list>
@@ -178,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628047138009</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="modify code">
+      <created>1628061778819</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1628061778819</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

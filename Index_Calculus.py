@@ -109,12 +109,12 @@ def Index_Calculus(p,q,g,h):   # q|(p-1) ( p,q : prime ), H = <g> , | H | = q , 
 
 if __name__ == "__main__":
 
-    p,q,g = DSA_Parameter.DSA_Parameter(100,1000)
+    p,q,g = DSA_Parameter.DSA_Parameter(100,6000)
     x = random.randint(2,q-1)
     h = Lib.mns(g,x,p)
     '''
     p,q,g = 2447,1223,25
-    x = 9999
+    x = 456
     h = 811
     '''
     print("GF({}) , G = <{}> , |G| = {} , {}^{} = {}".format(p,g,q,g,x,h))
